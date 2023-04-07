@@ -1,47 +1,42 @@
-# Astro Starter Kit: Minimal
+# 魔法のスプレッドシート
 
-```
-npm create astro@latest -- --template minimal
-```
+ITエンジニアインターン情報が集まる魔法のスプレッドシート
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+👉👉👉 [魔法のスプレッドシート2023・夏](https://www.notion.so/049ca5329bbc4493bc9f4f5b3727d027) 👈👈👈
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 魔法のスプレッドシートとは？
 
-## 🚀 Project Structure
+ソフトウェアエンジニア志望の学生のためのインターンシップの情報が閲覧できる便利なデータベースです。
 
-Inside of your Astro project, you'll see the following folders and files:
+応募締め切りや開催方法などの情報が一覧で確認できます。
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+毎年、有志によって管理されています。
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## フィードバック
 
-Any static assets, like images, can be placed in the `public/` directory.
+魔法のスプレッドシートに追加したいインターンシップ等の情報がありましたらURLをお知らせください。
 
-## 🧞 Commands
+またデータベースに誤り等がありましたら改善点をお知らせください。
 
-All commands are run from the root of the project, from a terminal:
+データベースへの反映には数日かかる場合がございます。
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+[https://tally.so/embed/3lB5gV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1](https://tally.so/embed/3lB5gV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1)
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## バックナンバー
+
+- [2022夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=762111034)
+- [2021夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=62946583)
+- [2020夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=1644405096)
+- [2019夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=0)
+- [2018夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=1234947860)
+- [2017夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=211039304)
+- [2016夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=397387909)
+- [2015夏ITエンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=142019139)
+
+## 管理者
+
+- 2023
+    - [@keigomichi](https://twitter.com/keigomichi)
+    - [@CardsEditor](https://twitter.com/cardseditor)
