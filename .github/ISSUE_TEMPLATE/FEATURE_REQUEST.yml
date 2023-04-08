@@ -1,0 +1,27 @@
+name: 機能リクエスト
+description: このプロジェクトにアイデアを提案する。
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: リクエストの内容
+      description: 機能リクエストの内容を具体的に説明してください。
+    validations:
+      required: false
+  - type: textarea
+    id: todo
+    attributes:
+      label: Todo
+      description: リクエストの内容を実現するために必要なタスクを説明してください。
+      value: "- [ ] "
+    validations:
+      required: false
+  - type: textarea
+    id: others
+    attributes:
+      label: その他
+      description: その他の付言したい情報等を記入してください。
+    validations:
+      required: false

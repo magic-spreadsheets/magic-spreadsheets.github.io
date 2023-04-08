@@ -1,0 +1,42 @@
+name: 不具合報告
+description: 不具合報告を提出する。
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 不具合の内容
+      description: 発生した不具合の内容を説明してください。
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 期待する動作
+      description: どのような動作を期待していたのか説明してください。
+    validations:
+      required: false
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 動作環境
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順
+      description: どのような操作をしたら再現するのか、または再現するためのリポジトリを説明してください。
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: 関連するログ出力
+      description: 関連するログ出力があれば貼り付けてください。これは自動的にコードにフォーマットされますので、バッククォートは必要ありません。
+      render: Shell
