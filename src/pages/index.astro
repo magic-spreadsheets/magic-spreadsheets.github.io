@@ -1,5 +1,5 @@
 ---
-import Favicon from "../components/Favicon.astro";
+import Favicon from '../components/Favicon.astro';
 ---
 
 <html lang="ja">
@@ -111,146 +111,146 @@ import Favicon from "../components/Favicon.astro";
         </ul>
       </div>
     </main>
-  </body>
-  <style>
-    :root {
-      --text-color: rgba(255, 255, 255, 0.81);
-      --background-color: rgb(25, 25, 25);
-      --content-link-background-color: #333;
-      --line-color: rgba(255, 255, 255, 0.2);
-      --anchor-color: rgba(255, 255, 255, 0.5);
-    }
-
-    @media (prefers-color-scheme: light) {
+    <style>
       :root {
-        --text-color: #333;
-        --background-color: #fafafa;
-        --content-link-background-color: #eee;
-        --line-color: rgba(0, 0, 0, 0.2);
-        --anchor-color: rgba(0, 0, 0, 0.6);
+        --text-color: rgba(255, 255, 255, 0.81);
+        --background-color: rgb(25, 25, 25);
+        --content-link-background-color: #333;
+        --line-color: rgba(255, 255, 255, 0.2);
+        --anchor-color: rgba(255, 255, 255, 0.5);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --text-color: #333;
+          --background-color: #fafafa;
+          --content-link-background-color: #eee;
+          --line-color: rgba(0, 0, 0, 0.2);
+          --anchor-color: rgba(0, 0, 0, 0.6);
+        }
+
+        img {
+          filter: saturate(0.7);
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+          'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans GB', メイリオ, Meiryo,
+          'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+      }
+
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        width: clamp(min(600px, calc(100% - 40px)), 90%, 800px);
+        margin: 40px auto 80px auto;
+        font-size: 16px;
+        line-height: 2;
       }
 
       img {
-        filter: saturate(0.7);
+        display: block;
+        object-fit: cover;
+        border-radius: 3px;
+        width: 78px;
+        height: 78px;
+        transition: opacity 100ms ease-out 0s;
       }
-    }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
-        'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans GB', メイリオ, Meiryo,
-        'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
-    }
+      a {
+        color: var(--anchor-color);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: var(--line-color);
+      }
 
-    body {
-      background-color: var(--background-color);
-      color: var(--text-color);
-      width: clamp(min(600px, calc(100% - 40px)), 90%, 800px);
-      margin: 40px auto 80px auto;
-      font-size: 16px;
-      line-height: 2;
-    }
+      a:hover {
+        opacity: 0.8;
+      }
 
-    img {
-      display: block;
-      object-fit: cover;
-      border-radius: 3px;
-      width: 78px;
-      height: 78px;
-      transition: opacity 100ms ease-out 0s;
-    }
+      h1 {
+        font-size: clamp(32px, 5vw, 40px);
+        font-weight: 700;
+        margin: 2rem 0 1rem 0;
+        line-height: 1.2;
+      }
 
-    a {
-      color: var(--anchor-color);
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-decoration-color: var(--line-color);
-    }
+      h2 {
+        font-size: clamp(24px, 4vw, 32px);
+        line-height: 1.3;
+        font-weight: 600;
+        padding: 10px 0;
+        margin: 2.4rem 0 1rem;
+        border-bottom: 1px solid var(--line-color);
+      }
 
-    a:hover {
-      opacity: 0.8;
-    }
+      p {
+        padding: 8px 2px;
+      }
 
-    h1 {
-      font-size: clamp(32px, 5vw, 40px);
-      font-weight: 700;
-      margin: 2rem 0 1rem 0;
-      line-height: 1.2;
-    }
+      iframe {
+        max-width: 100%;
+        margin-top: 20px;
+      }
 
-    h2 {
-      font-size: clamp(24px, 4vw, 32px);
-      line-height: 1.3;
-      font-weight: 600;
-      padding: 10px 0;
-      margin: 2.4rem 0 1rem;
-      border-bottom: 1px solid var(--line-color);
-    }
+      ul {
+        padding-left: 24px;
+      }
 
-    p {
-      padding: 8px 2px;
-    }
+      li {
+        margin: 10px 0;
+        line-height: 1.6;
+      }
 
-    iframe {
-      max-width: 100%;
-      margin-top: 20px;
-    }
+      .gray {
+        color: var(--anchor-color);
+      }
 
-    ul {
-      padding-left: 24px;
-    }
+      .content-title {
+        padding-top: clamp(0px, 4vw, 80px);
+        padding-bottom: 20px;
+      }
 
-    li {
-      margin: 10px 0;
-      line-height: 1.6;
-    }
+      .content-title p {
+        padding-top: 0;
+      }
 
-    .gray {
-      color: var(--anchor-color);
-    }
+      .top-icon {
+        display: flex;
+        align-items: end;
+      }
 
-    .content-title {
-      padding-top: clamp(0px, 4vw, 80px);
-      padding-bottom: 20px;
-    }
+      .top-icon img {
+        width: 78px;
+        height: 78px;
+      }
 
-    .content-title p {
-      padding-top: 0;
-    }
+      .content-link {
+        font-weight: 600;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 20px;
+        margin: 16px 0;
+        background-color: var(--content-link-background-color);
+        border-radius: 4px;
+        color: var(--text-color);
+      }
 
-    .top-icon {
-      display: flex;
-      align-items: end;
-    }
+      .content-link img {
+        width: 23.04px;
+        height: 23.04px;
+      }
 
-    .top-icon img {
-      width: 78px;
-      height: 78px;
-    }
-
-    .content-link {
-      font-weight: 600;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      padding: 16px 20px;
-      margin: 16px 0;
-      background-color: var(--content-link-background-color);
-      border-radius: 4px;
-      color: var(--text-color);
-    }
-
-    .content-link img {
-      width: 23.04px;
-      height: 23.04px;
-    }
-
-    .contents {
-      list-style-type: none;
-      padding: 0;
-    }
-  </style>
+      .contents {
+        list-style-type: none;
+        padding: 0;
+      }
+    </style>
+  </body>
 </html>
