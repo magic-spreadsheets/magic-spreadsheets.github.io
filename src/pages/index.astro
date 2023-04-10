@@ -1,5 +1,13 @@
 ---
 import Favicon from '../components/Favicon.astro';
+import { maintainers } from '../../maintainers';
+import { databases } from '../../databases';
+import { compareFn } from '../utils/helper';
+
+const sortedDatabases = Object.entries(databases).sort((a, b) => compareFn(a[0], b[0]));
+const latestDatabase = sortedDatabases[0][1];
+const pastDatabases = sortedDatabases.slice(1);
+const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a[0], b[0]));
 ---
 
 <html lang="ja">
@@ -11,7 +19,7 @@ import Favicon from '../components/Favicon.astro';
     <meta name="description" content="ITエンジニアインターン情報が集まる魔法のスプレッドシート" />
     <meta name="og:url" content="https://magic-spreadsheets.pages.dev/" />
     <meta name="og:title" content="魔法のスプレッドシート" />
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="/thumbnail.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:site_name" content="魔法のスプレッドシート" />
@@ -28,12 +36,10 @@ import Favicon from '../components/Favicon.astro';
           <h1>魔法のスプレッドシート</h1>
           <p class="gray">ITエンジニアインターン情報が集まる魔法のスプレッドシート</p>
         </div>
-        <a
-          href="https://deep-professor-e3c.notion.site/049ca5329bbc4493bc9f4f5b3727d027?v=3b000340195242b0bd4b0741063ec259"
-        >
+        <a href={latestDatabase.href}>
           <div class="content-link">
             <img src="/favicon.svg" />
-            <div>魔法のスプレッドシート2023・夏</div>
+            <div>{latestDatabase.text}</div>
           </div>
         </a>
         <h2 id="目次">目次</h2>
@@ -60,62 +66,34 @@ import Favicon from '../components/Favicon.astro';
         <p class="gray">データベースへの反映には数日かかる場合がございます。</p>
         <h2 id="バックナンバー">バックナンバー</h2>
         <ul>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=762111034"
-              >2022夏ITエンジニアインターン</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=62946583"
-              >2021夏ITエンジニアインターン</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=1644405096"
-              >2020夏ITエンジニアインターン</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=0"
-              >2019夏ITエンジニアインターン</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=1234947860"
-              >2018夏ITエンジニアインターン</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=211039304"
-              >2017夏ITエンジニアインターン</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=397387909"
-              >2016夏ITエンジニアインターン</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=142019139"
-              >2015夏ITエンジニアインターン</a
-            >
-          </li>
+          {
+            pastDatabases.map(([, database]) => (
+              <li>
+                <a href={database.href}>{database.text}</a>
+              </li>
+            ))
+          }
         </ul>
         <h2 id="管理者">管理者</h2>
         <ul>
-          <li>2023</li>
-          <ul>
-            <li><a href="https://twitter.com/keigomichi">@keigomichi</a></li>
-            <li><a href="https://twitter.com/cardseditor">@CardsEditor</a></li>
-          </ul>
+          {
+            sortedMaintainers.map(([year, maintainers]) => (
+              <>
+                <li>{year}</li>
+                <ul>
+                  {maintainers.map((maintainer) => (
+                    <li>
+                      {maintainer.href !== undefined ? (
+                        <a href={maintainer.href}>{maintainer.text}</a>
+                      ) : (
+                        <>{maintainer.text}</>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ))
+          }
         </ul>
       </div>
     </main>
