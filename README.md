@@ -1,42 +1,40 @@
 <img src="./public/favicon.svg" width="80">
 
-# 魔法のスプレッドシート
+# [魔法のスプレッドシート](https://magic-spreadsheets.pages.dev)
 
 IT エンジニアインターン情報が集まる魔法のスプレッドシート
 
-👉👉👉 [魔法のスプレッドシート 2023・夏](https://deep-professor-e3c.notion.site/049ca5329bbc4493bc9f4f5b3727d027?v=3b000340195242b0bd4b0741063ec259) 👈👈👈
+![GitHub](https://img.shields.io/github/license/keigomichi/magic-spreadsheets)
+![GitHub Repo stars](https://img.shields.io/github/stars/keigomichi/magic-spreadsheets?style=social)
 
-## 魔法のスプレッドシートとは？
+ソフトウェアエンジニア志望の学生のためのインターンシップの情報が閲覧できる便利なデータベースです。応募締め切りや開催方法などの情報が一覧で確認できます。毎年、有志によって管理されています。
 
-ソフトウェアエンジニア志望の学生のためのインターンシップの情報が閲覧できる便利なデータベースです。
+## Development
 
-応募締め切りや開催方法などの情報が一覧で確認できます。
+このプロジェクトは [pnpm](https://pnpm.io)、[Astro](https://astro.build/) を使用し、Cloudflare Pages でデプロイしています。
 
-毎年、有志によって管理されています。
+ローカルで開発する場合は、このリポジトリをクローンし、以下のコマンドを実行して開発サーバを起動してください。
 
-## フィードバック
+```bash
+pnpm install
+pnpm dev
+```
 
-魔法のスプレッドシートに追加したいインターンシップ等の情報がありましたら URL をお知らせください。
+これにより、`localhost:3000` にアクセスすることで、変更内容をプレビューできます。
 
-またデータベースに誤り等がありましたら改善点をお知らせください。
+## Contributing
 
-データベースへの反映には数日かかる場合がございます。
+新しいコントリビューションを歓迎します！魔法のスプレッドシートに貢献する方法はたくさんあります。例えば、
 
-[https://tally.so/embed/3lB5gV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1](https://tally.so/embed/3lB5gV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1)
+- [データベース](https://deep-professor-e3c.notion.site/049ca5329bbc4493bc9f4f5b3727d027?v=3b000340195242b0bd4b0741063ec259) に新しいインターンシップの情報等を追加したり、誤った情報を修正したりする。
+- [新しい Issue](https://github.com/keigomichi/magic-spreadsheets/issues/new/choose) を作成して、不具合報告を提出したり、新しいアイデアを提案したりする。
+- オープンされた [Pull requests](https://github.com/keigomichi/magic-spreadsheets/pulls) をレビューする。
+- Twitter で、[#魔法のスプレッドシート](https://twitter.com/search?q=%23%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88) を友だちに共有する。
 
-## バックナンバー
+ご質問やご意見があれば [@keigomichi](https://twitter.com/keigomichi) までご連絡ください。
 
-- [2022 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=762111034)
-- [2021 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=62946583)
-- [2020 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=1644405096)
-- [2019 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=0)
-- [2018 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=1234947860)
-- [2017 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=211039304)
-- [2016 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=397387909)
-- [2015 夏 IT エンジニアインターン](https://docs.google.com/spreadsheets/d/1O4LqD6tfVisshD4YngjEKwpU1FQCGuD8vZ1qlVX0sBY/edit#gid=142019139)
+## Contributors
 
-## 管理者
-
-- 2023
-  - [@keigomichi](https://twitter.com/keigomichi)
-  - [@CardsEditor](https://twitter.com/cardseditor)
+- [@keigomichi](https://github.com/keigomichi)
+- [@notchcoder](https://github.com/notchcoder)
+- [@cardseditor](https://github.com/cardseditor)
