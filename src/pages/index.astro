@@ -79,6 +79,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         <p>以下のリンクへアクセスして編集してください。その際、Notion へのログインが必要です。</p>
         <a
           href="https://www.notion.so/049ca5329bbc4493bc9f4f5b3727d027?v=3b000340195242b0bd4b0741063ec259&pvs=4"
+          target="_blank"
         >
           編集画面へアクセス
         </a>
@@ -87,7 +88,9 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           {
             pastDatabases.map(([, database]) => (
               <li>
-                <a href={database.href}>{database.text}</a>
+                <a href={database.href} target="_blank">
+                  {database.text}
+                </a>
               </li>
             ))
           }
@@ -102,7 +105,9 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
                   {maintainers.map((maintainer) => (
                     <li>
                       {maintainer.href !== undefined ? (
-                        <a href={maintainer.href}>{maintainer.text}</a>
+                        <a href={maintainer.href} target="_blank">
+                          {maintainer.text}
+                        </a>
                       ) : (
                         <>{maintainer.text}</>
                       )}
@@ -127,7 +132,9 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         <p>
           魔法のスプレッドシートのプロジェクトには、誰でも気軽に参加できます。
           <br />
-          <a href="https://github.com/keigomichi/magic-spreadsheets">GitHubリポジトリ</a> へアクセスして、お気軽に新しいコントリビューションを開始してください！
+          <a href="https://github.com/keigomichi/magic-spreadsheets" target="_blank"
+            >GitHubリポジトリ</a
+          > へアクセスして、お気軽に新しいコントリビューションを開始してください！
         </p>
       </div>
     </main>
