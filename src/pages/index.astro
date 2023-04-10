@@ -95,6 +95,22 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
             ))
           }
         </ul>
+        <h2 id="コミュニティ">コミュニティ</h2>
+        <p class="budges-container">
+          <img
+            alt="GitHub"
+            src="https://img.shields.io/github/license/keigomichi/magic-spreadsheets"
+          />
+          <img
+            alt="GitHub Repo stars"
+            src="https://img.shields.io/github/stars/keigomichi/magic-spreadsheets?style=social"
+          />
+        </p>
+        <p>
+          魔法のスプレッドシートのプロジェクトには、誰でも気軽に参加できます。
+          <br />
+          <a href="https://github.com/keigomichi/magic-spreadsheets">GitHubリポジトリ</a> へアクセスして、お気軽に新しいコントリビューションを開始してください！
+        </p>
       </div>
     </main>
     <style>
@@ -236,6 +252,18 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
       .contents {
         list-style-type: none;
         padding: 0;
+      }
+
+      .budges-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        height: 38px;
+      }
+
+      .budges-container img {
+        height: 100%;
+        width: auto;
       }
     </style>
   </body>
