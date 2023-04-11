@@ -100,20 +100,21 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           {
             sortedMaintainers.map(([year, maintainers]) => (
               <>
-                <li>{year}</li>
-                <ul>
-                  {maintainers.map((maintainer) => (
-                    <li>
-                      {maintainer.href !== undefined ? (
-                        <a href={maintainer.href} target="_blank">
-                          {maintainer.text}
-                        </a>
-                      ) : (
-                        <>{maintainer.text}</>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                <li>{year}
+                  <ul>
+                    {maintainers.map((maintainer) => (
+                      <li>
+                        {maintainer.href !== undefined ? (
+                          <a href={maintainer.href} target="_blank">
+                            {maintainer.text}
+                          </a>
+                        ) : (
+                          <>{maintainer.text}</>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
               </>
             ))
           }
