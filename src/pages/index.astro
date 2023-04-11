@@ -2,6 +2,7 @@
 import Favicon from '../components/Favicon.astro';
 import { maintainers } from '../../maintainers';
 import { databases } from '../../databases';
+import { contactDetails } from '../../community-info';
 import { compareFn } from '../utils/helper';
 
 const sortedDatabases = Object.entries(databases).sort((a, b) => compareFn(a[0], b[0]));
@@ -71,18 +72,64 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         <h2 id="魔法のスプレッドシートとは？">魔法のスプレッドシートとは？</h2>
         <p>
           ソフトウェアエンジニア志望の学生のためのインターンシップの情報が閲覧できる便利なデータベースです。
+          <br />
+          応募締め切りや開催方法などの情報が一覧で確認できます。
         </p>
-        <p>応募締め切りや開催方法などの情報が一覧で確認できます。</p>
-        <p>毎年、有志によって管理されています。</p>
-        <h2 id="データベースを編集">データベースを編集</h2>
-        <p>インターンシップ等の情報を誰でも追加、修正できます。</p>
-        <p>以下のリンクへアクセスして編集してください。その際、Notion へのログインが必要です。</p>
-        <a
-          href="https://www.notion.so/049ca5329bbc4493bc9f4f5b3727d027?v=3b000340195242b0bd4b0741063ec259&pvs=4"
-          target="_blank"
-        >
-          編集画面へアクセス
-        </a>
+        <p>
+          毎年、有志によって管理されており、インターンシップ等の情報をどなたでも追加、修正していただけます。
+        </p>
+        <h2 id="コミュニティ">コミュニティ</h2>
+        <p class="budges-container">
+          <img
+            alt="GitHub"
+            src="https://img.shields.io/github/license/keigomichi/magic-spreadsheets"
+          />
+          <img
+            alt="GitHub Repo stars"
+            src="https://img.shields.io/github/stars/keigomichi/magic-spreadsheets?style=social"
+          />
+        </p>
+        <p>
+          魔法のスプレッドシートのさらなる発展に貢献しませんか？
+          <br />
+          私たちは新しいコントリビューションを歓迎します！魔法のスプレッドシートに貢献する方法はたくさんあります。例えば、
+        </p>
+        <ul>
+          <li>
+            <a href={latestDatabase.href} target="_blank">データベース</a> に新しいインターンシップの情報等を追加したり、誤った情報を修正したりする。
+          </li>
+          <li>
+            <a
+              href="https://github.com/keigomichi/magic-spreadsheets/issues/new/choose"
+              target="_blank"
+            >
+              新しい Issue
+            </a>
+            を作成して、不具合報告を提出したり、新しいアイデアを提案したりする。
+          </li>
+          <li>
+            オープンされた
+            <a href="https://github.com/keigomichi/magic-spreadsheets/pulls" target="_blank">
+              Pull requests
+            </a>
+            をレビューする。
+          </li>
+          <li>
+            Twitter で、
+            <a
+              href="https://twitter.com/search?q=%23%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88"
+              target="_blank"
+            >
+              #魔法のスプレッドシート
+            </a>
+            を友だちに共有する。
+          </li>
+        </ul>
+        <p>
+          ご質問やご意見があれば
+          <a href={contactDetails.href} target="_blank">{contactDetails.text}</a>
+          までご連絡ください。
+        </p>
         <h2 id="バックナンバー">バックナンバー</h2>
         <ul>
           {
@@ -100,7 +147,8 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           {
             sortedMaintainers.map(([year, maintainers]) => (
               <>
-                <li>{year}
+                <li>
+                  {year}
                   <ul>
                     {maintainers.map((maintainer) => (
                       <li>
@@ -119,24 +167,6 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
             ))
           }
         </ul>
-        <h2 id="コミュニティ">コミュニティ</h2>
-        <p class="budges-container">
-          <img
-            alt="GitHub"
-            src="https://img.shields.io/github/license/keigomichi/magic-spreadsheets"
-          />
-          <img
-            alt="GitHub Repo stars"
-            src="https://img.shields.io/github/stars/keigomichi/magic-spreadsheets?style=social"
-          />
-        </p>
-        <p>
-          魔法のスプレッドシートのプロジェクトには、誰でも気軽に参加できます。
-          <br />
-          <a href="https://github.com/keigomichi/magic-spreadsheets" target="_blank"
-            >GitHubリポジトリ</a
-          > へアクセスして、お気軽に新しいコントリビューションを開始してください！
-        </p>
       </div>
     </main>
     <style>
