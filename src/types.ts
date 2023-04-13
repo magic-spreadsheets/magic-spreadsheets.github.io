@@ -11,3 +11,8 @@ export type Database = {
   text: string;
   href: string;
 };
+
+export type ContactDetails = {
+  text: string;
+  href: string;
+};
