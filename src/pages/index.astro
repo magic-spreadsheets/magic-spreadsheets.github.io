@@ -180,20 +180,28 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
     </main>
     <style>
       :root {
-        --text-color: rgba(255, 255, 255, 0.81);
+        --text-color: #e1e3de;
+        --sub-text-color: rgba(192, 201, 192, 0.75);
         --background-color: rgb(25, 25, 25);
         --content-link-background-color: #333;
-        --line-color: rgba(255, 255, 255, 0.2);
-        --anchor-color: rgba(255, 255, 255, 0.5);
+        --line-color: rgba(138, 147, 139, 0.2);
+        --anchor-color: #74db9f;
+        --anchor-line-color: rgba(116, 219, 159, 0.2);
+        --tag-color: #b5ccba;
+        --tag-line-color: rgba(181, 204, 186, 0.2);
       }
 
       @media (prefers-color-scheme: light) {
         :root {
-          --text-color: #333;
+          --text-color: #191c1a;
+          --sub-text-color: rgba(64, 73, 66, 0.75);
           --background-color: #fafafa;
           --content-link-background-color: #eee;
-          --line-color: rgba(0, 0, 0, 0.2);
-          --anchor-color: rgba(0, 0, 0, 0.6);
+          --line-color: rgba(113, 121, 114, 0.2);
+          --anchor-color: #006d42;
+          --anchor-line-color: rgba(0, 109, 66, 0.2);
+          --tag-color: #4e6355;
+          --tag-line-color: rgba(78, 99, 85, 0.2);
         }
 
         img {
@@ -232,7 +240,12 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         color: var(--anchor-color);
         text-decoration: underline;
         text-decoration-thickness: 1px;
-        text-decoration-color: var(--line-color);
+        text-decoration-color: var(--anchor-line-color);
+      }
+
+      a[href^='#'] {
+        color: var(--tag-color);
+        text-decoration-color: var(--tag-line-color);
       }
 
       a:hover {
@@ -278,7 +291,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
       }
 
       .gray {
-        color: var(--anchor-color);
+        color: var(--sub-text-color);
       }
 
       .content-title {
