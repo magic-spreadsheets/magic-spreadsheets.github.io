@@ -44,19 +44,26 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           <h1>魔法のスプレッドシート</h1>
           <p class="gray">ITエンジニアインターン情報が集まる魔法のスプレッドシート</p>
         </div>
-        <a href={latestDatabase.href}>
-          <div class="content-link">
-            <img src="/favicon.svg" />
-            <div>{latestDatabase.text}</div>
-          </div>
-        </a>
         <a
           href="https://twitter.com/intent/tweet?url=https://magic-spreadsheets.pages.dev&text=%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%20-%20IT%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E6%83%85%E5%A0%B1%E3%81%8C%E9%9B%86%E3%81%BE%E3%82%8B%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%0a&hashtags=魔法のスプレッドシート,インターン,25卒"
           target="_blank"
         >
-          <div class="content-link">
-            <img src="/twitter.svg" />
-            <div>Twitter で共有する</div>
+          <div class="content-button">
+            <div class="row-container">
+              <img src="/twitter.svg" />
+              <div>Twitter で共有</div>
+            </div>
+          </div>
+        </a>
+        <a href={latestDatabase.href}>
+          <div class="content-card top-content-card">
+            <div class="row-container-space-between">
+              <div class="row-container">
+                <img src="/favicon.svg" />
+                <div>{latestDatabase.text}</div>
+              </div>
+              <div class="img-wrapper"><img src="/notion.svg" /></div>
+            </div>
           </div>
         </a>
         <h2 id="目次">目次</h2>
@@ -184,6 +191,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         --sub-text-color: rgba(192, 201, 192, 0.75);
         --background-color: rgb(25, 25, 25);
         --content-link-background-color: #333;
+        --image-background-color: #444;
         --line-color: rgba(138, 147, 139, 0.2);
         --anchor-color: #74db9f;
         --anchor-line-color: rgba(116, 219, 159, 0.2);
@@ -197,6 +205,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           --sub-text-color: rgba(64, 73, 66, 0.75);
           --background-color: #fafafa;
           --content-link-background-color: #eee;
+          --image-background-color: #ddd;
           --line-color: rgba(113, 121, 114, 0.2);
           --anchor-color: #006d42;
           --anchor-line-color: rgba(0, 109, 66, 0.2);
@@ -296,7 +305,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
 
       .content-title {
         padding-top: clamp(0px, 4vw, 80px);
-        padding-bottom: 20px;
+        padding-bottom: 8px;
       }
 
       .content-title p {
@@ -313,22 +322,70 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         height: 78px;
       }
 
-      .content-link {
+      .content-card {
         font-weight: 600;
-        display: flex;
-        flex-wrap: wrap;
         align-items: center;
-        gap: 8px;
-        padding: 16px 20px;
+        padding: 8px 8px 8px 20px;
         margin: 16px 0;
         background-color: var(--content-link-background-color);
         border-radius: 4px;
         color: var(--text-color);
+        cursor: pointer;
       }
 
-      .content-link img {
+      .top-content-card {
+        margin: 2rem 0 6rem 0;
+      }
+
+      .content-button {
+        font-weight: 400;
+        align-items: center;
+        padding: 4px 16px;
+        margin: 16px 0 32px;
+        background-color: var(--content-link-background-color);
+        border-radius: 100px;
+        color: var(--text-color);
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .row-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .row-container-space-between {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 8px;
+        justify-content: space-between;
+      }
+
+      .row-container-space-between .row-container {
+        margin-left: 8px;
+      }
+
+      .row-container img {
         width: 23.04px;
         height: 23.04px;
+      }
+
+      .img-wrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--image-background-color);
+      }
+
+      .img-wrapper img {
+        width: 60px;
+        height: 60px;
       }
 
       .contents {
