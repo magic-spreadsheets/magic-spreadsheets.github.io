@@ -57,9 +57,12 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         </a>
         <a href={latestDatabase.href}>
           <div class="content-card top-content-card">
-            <div class="row-container">
-              <img src="/favicon.svg" />
-              <div>{latestDatabase.text}</div>
+            <div class="row-container-space-between">
+              <div class="row-container">
+                <img src="/favicon.svg" />
+                <div>{latestDatabase.text}</div>
+              </div>
+              <div class="img-wrapper"><img src="/notion.svg" /></div>
             </div>
           </div>
         </a>
@@ -188,6 +191,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         --sub-text-color: rgba(192, 201, 192, 0.75);
         --background-color: rgb(25, 25, 25);
         --content-link-background-color: #333;
+        --image-background-color: #444;
         --line-color: rgba(138, 147, 139, 0.2);
         --anchor-color: #74db9f;
         --anchor-line-color: rgba(116, 219, 159, 0.2);
@@ -201,6 +205,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           --sub-text-color: rgba(64, 73, 66, 0.75);
           --background-color: #fafafa;
           --content-link-background-color: #eee;
+          --image-background-color: #ddd;
           --line-color: rgba(113, 121, 114, 0.2);
           --anchor-color: #006d42;
           --anchor-line-color: rgba(0, 109, 66, 0.2);
@@ -320,7 +325,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
       .content-card {
         font-weight: 600;
         align-items: center;
-        padding: 16px 20px;
+        padding: 8px 8px 8px 20px;
         margin: 16px 0;
         background-color: var(--content-link-background-color);
         border-radius: 4px;
@@ -351,9 +356,37 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         gap: 8px;
       }
 
+      .row-container-space-between {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 8px;
+        justify-content: space-between;
+      }
+
+      .row-container-space-between .row-container {
+        margin-top: 12px;
+        margin-left: 4px;
+      }
+
       .row-container img {
         width: 23.04px;
         height: 23.04px;
+      }
+
+      .img-wrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--image-background-color);
+      }
+
+      .img-wrapper img {
+        width: 60px;
+        height: 60px;
       }
 
       .contents {
