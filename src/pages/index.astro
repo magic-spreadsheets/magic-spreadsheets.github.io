@@ -48,7 +48,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           href="https://twitter.com/intent/tweet?url=https://magic-spreadsheets.pages.dev&text=%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%20-%20IT%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E6%83%85%E5%A0%B1%E3%81%8C%E9%9B%86%E3%81%BE%E3%82%8B%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%0a&hashtags=魔法のスプレッドシート,インターン,25卒"
           target="_blank"
         >
-          <div class="content-button">
+          <div class="content-button top-content-button">
             <div class="row-container">
               <img src="/twitter.svg" />
               <div>Twitter で共有</div>
@@ -94,6 +94,17 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           <br />
           <a href={latestDatabase.href} target="_blank">データベース</a> に新しいインターンシップの情報等を追加したり、誤った情報を修正したりしてください！
         </p>
+        <a href={latestDatabase.href} target="_blank">
+          <div class="content-card">
+            <div class="row-container-space-between">
+              <div class="row-container">
+                <img src="/favicon.svg" />
+                <div>{latestDatabase.text}</div>
+              </div>
+              <div class="img-wrapper"><img src="/notion.svg" /></div>
+            </div>
+          </div>
+        </a>
         <h3>Twitter で共有する</h3>
         <p>
           Twitter で、
@@ -105,6 +116,17 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           </a>
           を友だちに共有してください！
         </p>
+        <a
+          href="https://twitter.com/intent/tweet?url=https://magic-spreadsheets.pages.dev&text=%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%20-%20IT%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E6%83%85%E5%A0%B1%E3%81%8C%E9%9B%86%E3%81%BE%E3%82%8B%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%0a&hashtags=魔法のスプレッドシート,インターン,25卒"
+          target="_blank"
+        >
+          <div class="content-button">
+            <div class="row-container">
+              <img src="/twitter.svg" />
+              <div>Twitter で共有</div>
+            </div>
+          </div>
+        </a>
         <h3>このWebページのプロジェクトに参加する</h3>
         <p class="budges-container">
           <img
@@ -116,6 +138,17 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
             src="https://img.shields.io/github/stars/keigomichi/magic-spreadsheets?style=social"
           />
         </p>
+        <a href="https://github.com/keigomichi/magic-spreadsheets" target="_blank">
+          <div class="content-card">
+            <div class="row-container-space-between">
+              <div class="row-container">
+                <img src="/github.svg" class="on-background" />
+                <div>keigomichi/magic-spreadsheets</div>
+              </div>
+              <div class="img-wrapper"><img src="/github.svg" class="on-background" /></div>
+            </div>
+          </div>
+        </a>
         <p>
           <a href="https://github.com/keigomichi/magic-spreadsheets" target="_blank">
             GitHubリポジトリ
@@ -146,6 +179,17 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           <a href={contactDetails.href} target="_blank">{contactDetails.text}</a>
           までご連絡ください。
         </p>
+        <a
+          href={contactDetails.href}
+          target="_blank"
+        >
+          <div class="content-button">
+            <div class="row-container">
+              <img src="/twitter.svg" />
+              <div>{contactDetails.text}</div>
+            </div>
+          </div>
+        </a>
         <h2 id="バックナンバー">バックナンバー</h2>
         <ul>
           {
@@ -197,6 +241,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         --anchor-line-color: rgba(116, 219, 159, 0.2);
         --tag-color: #b5ccba;
         --tag-line-color: rgba(181, 204, 186, 0.2);
+        --on-background-brightness: 2;
       }
 
       @media (prefers-color-scheme: light) {
@@ -211,6 +256,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           --anchor-line-color: rgba(0, 109, 66, 0.2);
           --tag-color: #4e6355;
           --tag-line-color: rgba(78, 99, 85, 0.2);
+          --on-background-brightness: 0;
         }
 
         img {
@@ -243,6 +289,10 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         width: 78px;
         height: 78px;
         transition: opacity 100ms ease-out 0s;
+      }
+
+      img.on-background {
+        filter: brightness(var(--on-background-brightness));
       }
 
       a {
@@ -278,7 +328,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
       }
 
       h3 {
-        margin: 2rem 0 0 0;
+        margin: 3rem 0 0 0;
       }
 
       p {
@@ -326,7 +376,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         font-weight: 600;
         align-items: center;
         padding: 8px 8px 8px 20px;
-        margin: 16px 0;
+        margin: 8px 0 16px;
         background-color: var(--content-link-background-color);
         border-radius: 4px;
         color: var(--text-color);
@@ -334,19 +384,23 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
       }
 
       .top-content-card {
-        margin: 2rem 0 6rem 0;
+        margin: 1rem 0 6rem 0;
       }
 
       .content-button {
         font-weight: 400;
         align-items: center;
         padding: 4px 16px;
-        margin: 16px 0 32px;
+        margin: 8px 0;
         background-color: var(--content-link-background-color);
         border-radius: 100px;
         color: var(--text-color);
         display: inline-block;
         cursor: pointer;
+      }
+
+      .top-content-button {
+        margin: 16px 0 32px;
       }
 
       .row-container {
