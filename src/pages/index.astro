@@ -4,7 +4,6 @@ import { maintainers } from '../../maintainers';
 import { databases } from '../../databases';
 import { contactDetails } from '../../community-info';
 import { compareFn } from '../utils/helper';
-import CopyButton from '../components/CopyButton.astro';
 
 const sortedDatabases = Object.entries(databases).sort((a, b) => compareFn(a[0], b[0]));
 const latestDatabase = sortedDatabases[0][1];
@@ -14,7 +13,6 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
 
 <html lang="ja">
   <head>
-    <link rel="stylesheet" href="/src/styles/main.css" />
     <meta charset="utf-8" />
     <Favicon />
     <meta name="viewport" content="width=device-width" />
@@ -58,7 +56,16 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
               </div>
             </div>
           </a>
-          <CopyButton clipboardText="https://magic-spreadsheets.pages.dev" />
+          <div
+            class="content-button top-content-button"
+            id="copy-button"
+            copy-value="https://magic-spreadsheets.pages.dev"
+          >
+            <div class="row-container">
+              <img src="/copy.svg" />
+              <div>リンクをコピー</div>
+            </div>
+          </div>
         </div>
         <a href={latestDatabase.href}>
           <div class="content-card top-content-card">
@@ -231,5 +238,252 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         </ul>
       </div>
     </main>
+    <style>
+      :root {
+        --text-color: #e1e3de;
+        --sub-text-color: rgba(192, 201, 192, 0.75);
+        --background-color: rgb(25, 25, 25);
+        --content-link-background-color: #333;
+        --image-background-color: #444;
+        --line-color: rgba(138, 147, 139, 0.2);
+        --anchor-color: #74db9f;
+        --anchor-line-color: rgba(116, 219, 159, 0.2);
+        --tag-color: #b5ccba;
+        --tag-line-color: rgba(181, 204, 186, 0.2);
+        --on-background-brightness: 2;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --text-color: #191c1a;
+          --sub-text-color: rgba(64, 73, 66, 0.75);
+          --background-color: #fafafa;
+          --content-link-background-color: #eee;
+          --image-background-color: #ddd;
+          --line-color: rgba(113, 121, 114, 0.2);
+          --anchor-color: #006d42;
+          --anchor-line-color: rgba(0, 109, 66, 0.2);
+          --tag-color: #4e6355;
+          --tag-line-color: rgba(78, 99, 85, 0.2);
+          --on-background-brightness: 0;
+        }
+
+        img {
+          filter: saturate(0.7);
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+          'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans GB', メイリオ, Meiryo,
+          'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        width: clamp(min(600px, calc(100% - 40px)), 90%, 800px);
+        margin: 40px auto 80px auto;
+        font-size: 16px;
+        line-height: 2;
+      }
+
+      img {
+        display: block;
+        object-fit: cover;
+        border-radius: 3px;
+        width: 78px;
+        height: 78px;
+        transition: opacity 100ms ease-out 0s;
+      }
+
+      img.on-background {
+        filter: brightness(var(--on-background-brightness));
+      }
+
+      a {
+        color: var(--anchor-color);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: var(--anchor-line-color);
+        transition: 0.2s;
+      }
+
+      a[href^='#'] {
+        color: var(--tag-color);
+        text-decoration-color: var(--tag-line-color);
+      }
+
+      a:hover {
+        opacity: 0.8;
+      }
+
+      h1 {
+        font-size: clamp(32px, 5vw, 40px);
+        font-weight: 700;
+        margin: 2rem 0 1rem 0;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: clamp(24px, 4vw, 32px);
+        line-height: 1.3;
+        font-weight: 600;
+        padding: 10px 0;
+        margin: 4rem 0 1rem;
+        border-bottom: 1px solid var(--line-color);
+      }
+
+      h3 {
+        margin: 3rem 0 0 0;
+      }
+
+      p {
+        padding: 8px 2px;
+      }
+
+      iframe {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      ul {
+        padding-left: 24px;
+      }
+
+      li {
+        margin: 10px 0;
+        line-height: 1.6;
+      }
+
+      .gray {
+        color: var(--sub-text-color);
+      }
+
+      .content-title {
+        padding-top: clamp(0px, 4vw, 80px);
+        padding-bottom: 8px;
+      }
+
+      .content-title p {
+        padding-top: 0;
+      }
+
+      .top-icon {
+        display: flex;
+        align-items: end;
+      }
+
+      .top-icon img {
+        width: 78px;
+        height: 78px;
+      }
+
+      .content-card {
+        font-weight: 600;
+        align-items: center;
+        padding: 8px 8px 8px 20px;
+        margin: 8px 0 16px;
+        background-color: var(--content-link-background-color);
+        border-radius: 4px;
+        color: var(--text-color);
+        cursor: pointer;
+      }
+
+      .top-content-card {
+        margin: 1rem 0 6rem 0;
+      }
+
+      .content-button {
+        font-weight: 400;
+        align-items: center;
+        padding: 4px 16px;
+        margin: 8px 0;
+        background-color: var(--content-link-background-color);
+        border-radius: 100px;
+        color: var(--text-color);
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .top-content-button {
+        margin: 16px 0 32px;
+      }
+
+      .content-button:hover {
+        opacity: 0.8;
+      }
+
+      .row-container-loose {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .row-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .row-container-space-between {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 8px;
+        justify-content: space-between;
+      }
+
+      .row-container-space-between .row-container {
+        margin-left: 8px;
+      }
+
+      .row-container img {
+        width: 23.04px;
+        height: 23.04px;
+      }
+
+      .img-wrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--image-background-color);
+      }
+
+      .img-wrapper img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .contents {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .budges-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        height: 38px;
+      }
+
+      .budges-container img {
+        height: 100%;
+        width: auto;
+      }
+    </style>
   </body>
 </html>
