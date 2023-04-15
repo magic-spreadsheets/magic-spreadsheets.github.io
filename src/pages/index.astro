@@ -282,10 +282,6 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
-
       body {
         background-color: var(--background-color);
         color: var(--text-color);
@@ -313,7 +309,6 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-decoration-color: var(--anchor-line-color);
-        transition: 0.2s;
       }
 
       a[href^='#'] {
