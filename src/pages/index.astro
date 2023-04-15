@@ -5,6 +5,7 @@ import { databases } from '../../databases';
 import { contactDetails } from '../../community-info';
 import { compareFn } from '../utils/helper';
 import CopyButton from '../components/CopyButton.astro';
+import '../styles/main.css';
 
 const sortedDatabases = Object.entries(databases).sort((a, b) => compareFn(a[0], b[0]));
 const latestDatabase = sortedDatabases[0][1];
@@ -14,7 +15,6 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
 
 <html lang="ja">
   <head>
-    <link rel="stylesheet" href="src/styles/main.css" />
     <meta charset="utf-8" />
     <Favicon />
     <meta name="viewport" content="width=device-width" />
