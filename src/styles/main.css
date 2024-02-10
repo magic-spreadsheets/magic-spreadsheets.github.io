@@ -6,9 +6,7 @@
   --image-background-color: #444;
   --line-color: rgba(138, 147, 139, 0.2);
   --anchor-color: #74db9f;
-  --anchor-line-color: rgba(116, 219, 159, 0.2);
   --tag-color: #b5ccba;
-  --tag-line-color: rgba(181, 204, 186, 0.2);
   --on-background-brightness: 2;
 }
 
@@ -21,9 +19,7 @@
     --image-background-color: #ddd;
     --line-color: rgba(113, 121, 114, 0.2);
     --anchor-color: #006d42;
-    --anchor-line-color: rgba(0, 109, 66, 0.2);
     --tag-color: #4e6355;
-    --tag-line-color: rgba(78, 99, 85, 0.2);
     --on-background-brightness: 0;
   }
 
@@ -69,15 +65,12 @@ img.on-background {
 
 a {
   color: var(--anchor-color);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: var(--anchor-line-color);
+  text-decoration: none;
   transition: 0.2s;
 }
 
 a[href^='#'] {
   color: var(--tag-color);
-  text-decoration-color: var(--tag-line-color);
 }
 
 a:hover {
@@ -154,13 +147,17 @@ footer {
   height: 78px;
 }
 
+.content-card-link {
+  border-radius: 12px;
+}
+
 .content-card {
   font-weight: 600;
   align-items: center;
   padding: 8px 8px 8px 20px;
   margin: 8px 0 16px;
   background-color: var(--content-link-background-color);
-  border-radius: 4px;
+  border-radius: 12px;
   color: var(--text-color);
   cursor: pointer;
 }
@@ -180,7 +177,6 @@ footer {
   display: inline-block;
   cursor: pointer;
   transition: 0.2s;
-  text-decoration: none;
 }
 
 .content-button:hover {

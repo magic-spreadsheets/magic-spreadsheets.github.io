@@ -59,7 +59,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           </a>
           <CopyButton clipboardText="https://magic-spreadsheets.pages.dev" />
         </div>
-        <a href={latestDatabase.href}>
+        <a href={latestDatabase.href} class="content-card-link">
           <div class="content-card top-content-card">
             <div class="row-container-space-between">
               <div class="row-container">
@@ -98,7 +98,7 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           <br />
           <a href={latestDatabase.href} target="_blank">データベース</a> に新しいインターンシップの情報等を追加したり、誤った情報を修正したりしてください！
         </p>
-        <a href={latestDatabase.href} target="_blank">
+        <a href={latestDatabase.href} target="_blank" class="content-card-link">
           <div class="content-card">
             <div class="row-container-space-between">
               <div class="row-container">
@@ -141,7 +141,11 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
             src="https://img.shields.io/github/stars/keigomichi/magic-spreadsheets?style=social"
           />
         </p>
-        <a href="https://github.com/keigomichi/magic-spreadsheets" target="_blank">
+        <a
+          href="https://github.com/keigomichi/magic-spreadsheets"
+          target="_blank"
+          class="content-card-link"
+        >
           <div class="content-card">
             <div class="row-container-space-between">
               <div class="row-container">
