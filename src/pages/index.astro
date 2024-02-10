@@ -50,12 +50,11 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           <a
             href="https://twitter.com/intent/tweet?url=https://magic-spreadsheets.pages.dev&text=%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%20-%20IT%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E6%83%85%E5%A0%B1%E3%81%8C%E9%9B%86%E3%81%BE%E3%82%8B%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%0a&hashtags=魔法のスプレッドシート,インターン,25卒"
             target="_blank"
+            class="content-button"
           >
-            <div class="content-button top-content-button">
-              <div class="row-container">
-                <img src="/twitter.svg" />
-                <div>Twitter で共有</div>
-              </div>
+            <div class="row-container">
+              <img src="/twitter.svg" />
+              <div>Twitter で共有</div>
             </div>
           </a>
           <CopyButton clipboardText="https://magic-spreadsheets.pages.dev" />
@@ -124,12 +123,11 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         <a
           href="https://twitter.com/intent/tweet?url=https://magic-spreadsheets.pages.dev&text=%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%20-%20IT%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E6%83%85%E5%A0%B1%E3%81%8C%E9%9B%86%E3%81%BE%E3%82%8B%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%0a&hashtags=魔法のスプレッドシート,インターン,25卒"
           target="_blank"
+          class="content-button"
         >
-          <div class="content-button">
-            <div class="row-container">
-              <img src="/twitter.svg" />
-              <div>Twitter で共有</div>
-            </div>
+          <div class="row-container">
+            <img src="/twitter.svg" />
+            <div>Twitter で共有</div>
           </div>
         </a>
         <h3>このWebページのプロジェクトに参加する</h3>
@@ -184,12 +182,10 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
           <a href={contactDetails.href} target="_blank">{contactDetails.text}</a>
           までご連絡ください。
         </p>
-        <a href={contactDetails.href} target="_blank">
-          <div class="content-button">
-            <div class="row-container">
-              <img src="/twitter.svg" />
-              <div>{contactDetails.text}</div>
-            </div>
+        <a href={contactDetails.href} target="_blank" class="content-button">
+          <div class="row-container">
+            <img src="/twitter.svg" />
+            <div>{contactDetails.text}</div>
           </div>
         </a>
         <h2 id="バックナンバー">バックナンバー</h2>
@@ -231,5 +227,8 @@ const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a
         </ul>
       </div>
     </main>
+    <footer>
+      <small>&copy; {new Date().getFullYear()} {contactDetails.text}</small>
+    </footer>
   </body>
 </html>

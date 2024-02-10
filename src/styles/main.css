@@ -122,6 +122,15 @@ li {
   line-height: 1.6;
 }
 
+footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--line-color);
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 14px;
+  color: var(--sub-text-color);
+}
+
 .gray {
   color: var(--sub-text-color);
 }
@@ -171,6 +180,7 @@ li {
   display: inline-block;
   cursor: pointer;
   transition: 0.2s;
+  text-decoration: none;
 }
 
 .top-content-button {
