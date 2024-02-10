@@ -172,7 +172,7 @@ footer {
 .content-button {
   font-weight: 400;
   align-items: center;
-  padding: 4px 16px;
+  padding: 4px 20px 4px 16px;
   margin: 8px 0;
   background-color: var(--content-link-background-color);
   border-radius: 100px;
@@ -181,10 +181,6 @@ footer {
   cursor: pointer;
   transition: 0.2s;
   text-decoration: none;
-}
-
-.top-content-button {
-  margin: 16px 0 32px;
 }
 
 .content-button:hover {
@@ -196,6 +192,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
+  margin: 16px 0 32px;
 }
 
 .row-container {
@@ -218,8 +215,18 @@ footer {
 }
 
 .row-container img {
-  width: 23.04px;
-  height: 23.04px;
+  width: 24px;
+  height: 24px;
+}
+
+.row-container img[src='/x.svg'] {
+  filter: brightness(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .row-container img[src='/x.svg'] {
+    filter: brightness(1);
+  }
 }
 
 .img-wrapper {
