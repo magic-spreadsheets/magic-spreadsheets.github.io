@@ -1,6 +1,10 @@
 import type { Databases } from './src/types';
 
 export const databases: Databases = {
+  2024: {
+    text: '魔法のスプレッドシート2024',
+    href: 'https://deep-professor-e3c.notion.site/277c859180bd4f99bc7dd1707a7e9b16?v=b9cbe037a2364cc5a1c62dad9f62fa81',
+  },
   2023: {
     text: '魔法のスプレッドシート2023・夏',
     href: 'https://deep-professor-e3c.notion.site/049ca5329bbc4493bc9f4f5b3727d027?v=3b000340195242b0bd4b0741063ec259',
