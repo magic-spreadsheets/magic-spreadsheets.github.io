@@ -2,6 +2,6 @@ import type { ContactDetails } from './src/types';
 
 // お問い合わせ先
 export const contactDetails: ContactDetails = {
-  text: '@keigomichi',
-  href: 'https://twitter.com/keigomichi',
+  text: '@mikan_54951',
+  href: 'https://twitter.com/mikan_54951',
 };
