@@ -31,4 +31,4 @@ pnpm dev
 - オープンされた [Pull requests](https://github.com/magic-spreadsheets/magic-spreadsheets/pulls) をレビューする。
 - Twitter で、[#魔法のスプレッドシート](https://twitter.com/search?q=%23%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88) を友だちに共有する。
 
-ご質問やご意見があれば [@hihumikan](https://twitter.com/mikan_54951) までご連絡ください。
+ご質問やご意見があれば [@mikan_54951](https://twitter.com/mikan_54951) までご連絡ください。
