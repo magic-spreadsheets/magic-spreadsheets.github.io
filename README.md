@@ -1,6 +1,6 @@
 <img src="./public/favicon.svg" width="80">
 
-# [魔法のスプレッドシート](https://magic-spreadsheets.pages.dev)
+# [魔法のスプレッドシート](https://magic-spreadsheets.github.io)
 
 IT エンジニアインターン情報が集まる魔法のスプレッドシート
 
