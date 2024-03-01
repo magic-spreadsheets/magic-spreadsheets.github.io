@@ -11,7 +11,7 @@ IT エンジニアインターン情報が集まる魔法のスプレッドシ�
 
 ## Development
 
-このプロジェクトは [pnpm](https://pnpm.io)、[Astro](https://astro.build/) を使用し、Cloudflare Pages でデプロイしています。
+このプロジェクトは [pnpm](https://pnpm.io)、[Astro](https://astro.build/) を使用し、GitHub Pages でデプロイしています。
 
 ローカルで開発する場合は、このリポジトリをクローンし、以下のコマンドを実行して開発サーバを起動してください。
 
