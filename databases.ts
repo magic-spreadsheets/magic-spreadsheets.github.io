@@ -7,7 +7,7 @@ export const databases: Databases = {
   },
   2023: {
     text: '魔法のスプレッドシート2023・夏',
-    href: 'https://deep-professor-e3c.notion.site/049ca5329bbc4493bc9f4f5b3727d027?v=3b000340195242b0bd4b0741063ec259',
+    href: 'https://uncovered-nymphea-c74.notion.site/16655ccce6fd423c93065eed26879244?v=119890e687ab815aa0a5000c8c84319f',
   },
   2022: {
     text: '2022夏ITエンジニアインターン',
