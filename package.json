@@ -11,7 +11,7 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "dependencies": {
-    "astro": "^4.4.13"
+    "astro": "^4.15.12"
   },
   "devDependencies": {
     "prettier": "^2.8.7",
