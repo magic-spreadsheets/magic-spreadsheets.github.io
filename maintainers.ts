@@ -1,6 +1,12 @@
 import type { Maintainers } from './src/types';
 
 export const maintainers: Maintainers = {
+  2025: [
+    {
+      text: '@mshr0969',
+      href: 'https://twitter.com/mshr0969',
+    }
+  ],
   2024: [
     {
       text: '@mikan_54951',
