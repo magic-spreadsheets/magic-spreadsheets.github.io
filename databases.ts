@@ -1,6 +1,10 @@
 import type { Databases } from './src/types';
 
 export const databases: Databases = {
+  2025: {
+    text: '魔法のスプレッドシート2025',
+    href: 'https://butter-lamb-af5.notion.site/120a1618c45480e2b96afe16f98d49cd?v=120a1618c4548156879e000c46d1b39b',
+  },
   2024: {
     text: '魔法のスプレッドシート2024',
     href: 'https://deep-professor-e3c.notion.site/277c859180bd4f99bc7dd1707a7e9b16?v=b9cbe037a2364cc5a1c62dad9f62fa81',
