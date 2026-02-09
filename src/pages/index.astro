@@ -13,7 +13,7 @@ const pastDatabases = sortedDatabases.slice(1);
 const sortedMaintainers = Object.entries(maintainers).sort((a, b) => compareFn(a[0], b[0]));
 
 const currentYear = new Date().getFullYear();
-const gradYears = [2, 3, 4].map((offset) => `${(currentYear + offset) % 100}卒`).join(',');
+const gradYears = [1, 2, 3].map((offset) => `${(currentYear + offset) % 100}卒`).join(',');
 const tweetText = encodeURIComponent(
   '魔法のスプレッドシート - ITエンジニアインターン情報が集まる魔法のスプレッドシート\n'
 );
@@ -33,7 +33,7 @@ const hashtags = encodeURIComponent(`魔法のスプレッドシート,インタ
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://magic-spreadsheets.github.io/thumbnail.png" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:site" content="@mshr0969" />
+    <meta property="twitter:site" content="@yusatck" />
     <meta property="twitter:image" content="https://magic-spreadsheets.github.io/thumbnail.png" />
     <meta
       property="twitter:description"
@@ -105,6 +105,8 @@ const hashtags = encodeURIComponent(`魔法のスプレッドシート,インタ
           魔法のスプレッドシートでは、インターンシップの情報をどなたでも編集していただけます。
           <br />
           <a href={latestDatabase.href} target="_blank">データベース</a> に新しいインターンシップの情報等を追加したり、誤った情報を修正したりしてください！
+          <br />
+          編集する場合は、Notion のリンクの形式を、<code>www.notion.com</code> に置き換えてください。
         </p>
         <a href={latestDatabase.href} target="_blank" class="content-card-link">
           <div class="content-card">
@@ -129,7 +131,7 @@ const hashtags = encodeURIComponent(`魔法のスプレッドシート,インタ
           を友だちに共有してください！
         </p>
         <a
-          href="https://twitter.com/intent/tweet?url=https://magic-spreadsheets.github.io&text=%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%20-%20IT%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E6%83%85%E5%A0%B1%E3%81%8C%E9%9B%86%E3%81%BE%E3%82%8B%E9%AD%94%E6%B3%95%E3%81%AE%E3%82%B9%E3%83%97%E3%83%AC%E3%83%83%E3%83%89%E3%82%B7%E3%83%BC%E3%83%88%0a&hashtags=魔法のスプレッドシート,インターン,27卒,28卒,29卒"
+          href={`https://twitter.com/intent/tweet?url=${url}&text=${tweetText}&hashtags=${hashtags}`}
           target="_blank"
           class="content-button"
         >
@@ -182,7 +184,10 @@ const hashtags = encodeURIComponent(`魔法のスプレッドシート,インタ
           </li>
           <li>
             オープンされた
-            <a href="https://github.com/magic-spreadsheets/magic-spreadsheets/pulls" target="_blank">
+            <a
+              href="https://github.com/magic-spreadsheets/magic-spreadsheets/pulls"
+              target="_blank"
+            >
               Pull requests
             </a>
             をレビューする。
